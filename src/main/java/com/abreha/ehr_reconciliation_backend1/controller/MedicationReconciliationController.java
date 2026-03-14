@@ -5,8 +5,10 @@ import com.abreha.ehr_reconciliation_backend1.dto.MedicationReconciliationRespon
 import com.abreha.ehr_reconciliation_backend1.service.MedicationReconciliationService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/api/reconcile")
 public class MedicationReconciliationController {
 

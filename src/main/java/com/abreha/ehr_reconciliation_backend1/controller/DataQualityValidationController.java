@@ -5,8 +5,10 @@ import com.abreha.ehr_reconciliation_backend1.dto.DataQualityValidationResponse;
 import com.abreha.ehr_reconciliation_backend1.service.DataQualityValidationService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/api/validate")
 public class DataQualityValidationController {
     private final DataQualityValidationService service;

@@ -64,8 +64,13 @@ public class OpenAiClientService {
             }
 
             return "No reasoning returned by OpenAI.";
-        } catch (Exception e) {
-            return "OpenAI call failed: " + e.getMessage();
+        }
+        //catch (Exception e) {
+           // return "OpenAI call failed: " + e.getMessage();
+        //}
+
+        catch (Exception e) {
+            return "AI reasoning is unavailable, so the system used rule-based reconciliation based on source reliability, recency, and medication history.";
         }
     }
 }
